@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .section {
+            width: 48%;
+            padding: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .chart {
+            width: 100%;
+            height: 200px; /* Reducido el tamaño de los gráficos */
+        }
+        .charts-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .button {
+            display: block;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Informe anual</h2>
+            <canvas id="annualDoughnutChart" class="chart"></canvas>
+        </div>
+        <div class="section">
+            <div class="charts-container">
+                <canvas id="annualBarChart" class="chart"></canvas>
+                <canvas id="annualBarChartBottom" class="chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Gráfico de prueba para el informe anual - Doughnut
+        var ctxDoughnut = document.getElementById('annualDoughnutChart').getContext('2d');
+        var annualDoughnutChart = new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Aprobados', 'Pendientes', 'Rechazados'],
+                datasets: [{
+                    data: [3000, 1500, 500],
+                    backgroundColor: ['#4caf50', '#ffeb3b', '#f44336']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Informe Anual - Distribución'
+                    }
+                }
+            }
+        });
+        
+
+        // Gráfico de prueba para el informe anual - Bar
+        var ctxBar = document.getElementById('annualBarChart').getContext('2d');
+        var annualBarChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Trámites recibidos',
+                    data: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160],
+                    backgroundColor: '#4caf50'
+                }, {
+                    label: 'Aprobados',
+                    data: [40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150],
+                    backgroundColor: '#2196f3'
+                }, {
+                    label: 'Pendientes',
+                    data: [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140],
+                    backgroundColor: '#ffeb3b'
+                }, {
+                    label: 'Rechazados',
+                    data: [20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130],
+                    backgroundColor: '#f44336'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Informe Anual - Trámites'
+                    }
+                }
+            }
+        });
+
+        // Gráfico de prueba para el informe anual - Bar (Debajo)
+        var ctxBarBottom = document.getElementById('annualBarChartBottom').getContext('2d');
+        var annualBarChartBottom = new Chart(ctxBarBottom, {
+            type: 'bar',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Trámites recibidos',
+                    data: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160],
+                    backgroundColor: '#4caf50'
+                }, {
+                    label: 'Aprobados',
+                    data: [40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150],
+                    backgroundColor: '#2196f3'
+                }, {
+                    label: 'Pendientes',
+                    data: [30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140],
+                    backgroundColor: '#ffeb3b'
+                }, {
+                    label: 'Rechazados',
+                    data: [20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130],
+                    backgroundColor: '#f44336'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Informe Anual - Trámites (Debajo)'
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
