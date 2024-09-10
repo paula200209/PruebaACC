@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos del Trámite</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-size: 12px;
+            background: #efefef7e;
+        }
+        .document-list {
+            padding: 0;
+            width: 75%;
+            margin: 30px auto;
+            margin-bottom: 0;
+        }
+        .document-list li {
+            align-items: center;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        .document-list .color-bar {
+            position: absolute;
+            width: 80px; 
+            height: 100%;
+            background-color: #0069c0; 
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        .document-list .content {
+            margin-left: 80px; 
+            background-color: #fff; 
+            padding: 10px;
+            border-top-left-radius: 5px;
+            position: relative;
+            z-index: 0; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .document-list .content span {
+            margin-right: 10px;
+        }
+        .document-list i {
+            color: #fff; 
+            font-size: 24px; 
+            z-index: 2; 
+        }
+        .document-list .bold-text {
+            font-weight: bold;
+        }
+        .document-list ul {
+            padding-left: 20px; 
+        }
+        .document-list ul li {
+            list-style-type: disc; 
+            padding-left: 20px; 
+            margin: 5px 0; 
+            border: none; 
+            background: none; 
+            box-shadow: none;
+            padding: 0;
+        }
+        .document-list .btn-link i {
+            color: #0069c0 !important; 
+            text-shadow: 0.5px 0.5px 0 #000; 
+            font-size: 40px;
+        }
+        .btn-submit, .btn-back {
+            display: inline-block;
+            width: calc(15% - 10px);
+            margin-top: 20px;
+            border: 3px solid #0069c0; 
+            background-color: #fff;
+            color: #0069c0;
+            border-radius: 10px; 
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            margin-right: 15px; 
+        }
+        .btn-submit:active, .btn-back:active {
+            background-color: #c0c0c0; 
+            color: #828282; 
+            border: none; 
+        }
+        .title-bg {
+            background-color: #0069c0;
+            color: #fff;
+            padding: 5px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 16px;
+        }
+        .button-group {
+            text-align: center; 
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .checkbox-container input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            border: 2px solid #0069c0;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            margin-right: 10px;
+            outline: none;
+            cursor: pointer;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <section class="mt-4" style="background-color: #fff;">
+        <h3 class="text-center title-bg">DOCUMENTOS DE TRÁMITES</h3>
+        <ul class="mt-4 document-list">
+            <li>
+                <div class="color-bar"><i class="bi bi-upload"></i></div>
+                <div class="content">
+                    <div>
+                        <span class="bold-text">Documento de identidad:</span>
+                        <ul>
+                            <li>Personas naturales: Copia de la cédula de ciudadanía o documento de identidad del (los) propietario(s) y/o apoderado.</li>
+                            <li>Certificado de existencia y representación legal y copia de la cédula de ciudadanía del presentante legal.</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-link"><i class="bi bi-plus-circle"></i></button>
+                </div>
+            </li>
+            <li>
+                <div class="color-bar"><i class="bi bi-upload"></i></div>
+                <div class="content">
+                    <div>
+                        <span class="bold-text">Documento legal de representación:</span>
+                        <ul>
+                            <li>Por medio del cual usted autoriza a otra persona para que ejecute algo en su nombre. Cuando usted da esa facultad a otra persona, usted se conoce como el poderdante y quien recibe la autorización es el apoderado.</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-link"><i class="bi bi-plus-circle"></i></button>
+                </div>
+            </li>
+            <li>
+                <div class="color-bar"><i class="bi bi-upload"></i></div>
+                <div class="content">
+                    <div>
+                        <span class="bold-text">Copia del Certificado de tradición y libertad:</span>
+                        <ul>
+                            <li>Copia del certificado de tradición del inmueble matriz para las segregaciones y del generado en el englobe.</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-link"><i class="bi bi-plus-circle"></i></button>
+                </div>
+            </li>
+            <li>
+                <div class="color-bar"><i class="bi bi-upload"></i></div>
+                <div class="content">
+                    <div>
+                        <span class="bold-text">Documentos que soporten la transferencia de la posesión u ocupación:</span>
+                        <ul>
+                            <li>Tales como: escrituras públicas, documentos privados, constancias de pago de impuestos, servicios públicos, contribuciones de valorización, etc.</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-link"><i class="bi bi-plus-circle"></i></button>
+                </div>
+            </li>
+        </ul>
+        <div class="checkbox-container">
+            <input type="checkbox" id="attach-docs">
+            <label for="attach-docs" class="checkbox-label">Adjuntar documentación posterior a radicado</label>
+        </div>
+    </section>
+
+    <div class="button-group">
+        <button class="btn btn-submit">RADICAR</button>
+        <button class="btn btn-back">VOLVER</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

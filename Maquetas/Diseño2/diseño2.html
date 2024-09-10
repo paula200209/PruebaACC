@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding-top: 20px;
+        }
+        .sidebar {
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .chart {
+            height: 250px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-item .icon {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+        }
+        .legend-item .label {
+            font-size: 12px;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-group button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <div class="user">
+                    <span class="badge badge-secondary">F</span>
+                    <p class="mt-2">FERNANDO</p>
+                </div>
+                <ul>
+                    <li><a href="#"><i class="fas fa-search"></i> Consultas</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Radicación</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i> Verificaciones</a></li>
+                    <li><a href="#"><i class="fas fa-user-plus"></i> Asignaciones</a></li>
+                    <li><a href="#"><i class="fas fa-tasks"></i> Trámites</a><span class="badge badge-pill badge-warning">14</span></li>
+                    <li><a href="#"><i class="fas fa-check-circle"></i> Aprobaciones</a></li>
+                    <li><a href="#"><i class="fas fa-file"></i> Certificados</a></li>
+                    <li><a href="#"><i class="fas fa-chart-bar"></i> Rendiemientos</a></li>
+                    <li><a href="#"><i class="fas fa-arrow-up"></i> Automáticas</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Visor geográfico</a></li>
+                </ul>
+                <button class="btn btn-outline-light mt-5">Salida segura</button>
+            </div>
+            <div class="col-md-9 main-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Informe anual
+                            </div>
+                            <div class="card-body">
+                                <div class="chart">
+                                    <canvas id="chart1"></canvas>
+                                </div>
+                                <p class="text-center">5000</p>
+                                <button class="btn btn-primary btn-block" onclick="location.href='#';">Volver a vista general</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Informe mensual
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Trámite en ejecución</h5>
+                                <div class="chart">
+                                    <canvas id="chart2"></canvas>
+                                </div>
+                                <div class="legend">
+                                    <div class="legend-item">
+                                        <div class="icon" style="background-color: #4CAF50;"></div>
+                                        <div class="label">Aprobados</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="icon" style="background-color: #FFC107;"></div>
+                                        <div class="label">Pendientes</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="icon" style="background-color: #F44336;"></div>
+                                        <div class="label">Rechazados</div>
+                                    </div>
+                                </div>
+                                <h5 class="card-title mt-4">Trámites radicados</h5>
+                                <div class="chart">
+                                    <canvas id="chart3"></canvas>
+                                </div>
+                                <div class="legend">
+                                    <div class="legend-item">
+                                        <div class="icon" style="background-color: #4CAF50;"></div>
+                                        <div class="label">Procedentes</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="icon" style="background-color: #F44336;"></div>
+                                        <div class="label">No procedentes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #00BCD4; padding: 15px; border-radius: 50%;"><i class="fas fa-users"></i></div>
+                                <h5 class="card-title mt-3">Cambio de propietario</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #00BCD4; padding: 15px; border-radius: 50%;"><i class="fas fa-file-alt"></i></div>
+                                <h5 class="card-title mt-3">Englobes y desenglobes</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #00BCD4; padding: 15px; border-radius: 50%;"><i class="fas fa-money-bill-wave"></i></div>
+                                <h5 class="card-title mt-3">Revisión de avaluós</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #00BCD4; padding: 15px; border-radius: 50%;"><i class="fas fa-user-check"></i></div>
+                                <h5 class="card-title mt-3">Autoavaluo catastral</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-database"></i></div>
+                                <h5 class="card-title mt-3">Incorporación o actualización de datos</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-database"></i></div>
+                                <h5 class="card-title mt-3">Incorporación a base de datos</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-file-alt"></i></div>
+                                <h5 class="card-title mt-3">Rectificación - No modifican Avalúo</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-home"></i></div>
+                                <h5 class="card-title mt-3">Procesos catastrales con efectos registrales</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-file-alt"></i></div>
+                                <h5 class="card-title mt-3">Rectificación - Modifican Avalúo</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-user-check"></i></div>
+                                <h5 class="card-title mt-3">Rectificación de datos del interesado</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-file-alt"></i></div>
+                                <h5 class="card-title mt-3">Cancelación de la inscripción catastral</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="icon" style="background-color: #FFC107; padding: 15px; border-radius: 50%;"><i class="fas fa-database"></i></div>
+                                <h5 class="card-title mt-3">Complementación de la información catastral</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        Tiempos de respuesta
+                    </div>
+                    <div class="card-body">
+                        <div class="chart">
+                            <canvas id="chart4"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="location.href='#';">VOLVER</button>
+                    <button class="btn btn-success" onclick="location.href='#';">IMPRIMIR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Chart 1
+        const ctx1 = document.getElementById('chart1').getContext('2d');
+        const chart1 = new Chart(ctx1, {
+            type: 'doughnut',
+            data: {
+                labels: ['Aprobados', 'Pendientes', 'Rechazados'],
+                datasets: [{
+                    data: [40, 30, 30],
+                    backgroundColor: ['#4CAF50', '#FFC107', '#F44336'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutoutPercentage: 50,
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Chart 2
+        const ctx2 = document.getElementById('chart2').getContext('2d');
+        const chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Aprobados',
+                    data: [50, 40, 45, 55, 48, 52, 48, 60, 55, 45, 50, 40],
+                    backgroundColor: '#4CAF50'
+                }, {
+                    label: 'Pendientes',
+                    data: [40, 35, 38, 42, 38, 40, 42, 48, 45, 38, 40, 35],
+                    backgroundColor: '#FFC107'
+                }, {
+                    label: 'Rechazados',
+                    data: [35, 40, 45, 38, 42, 38, 40, 35, 40, 45, 38, 42],
+                    backgroundColor: '#F44336'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Chart 3
+        const ctx3 = document.getElementById('chart3').getContext('2d');
+        const chart3 = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                datasets: [{
+                    label: 'Procedentes',
+                    data: [60, 55, 65, 68, 62, 60, 58, 65, 62, 58, 60, 55],
+                    backgroundColor: '#4CAF50'
+                }, {
+                    label: 'No procedentes',
+                    data: [45, 50, 42, 48, 40, 45, 48, 42, 45, 50, 48, 40],
+                    backgroundColor: '#F44336'
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Chart 4
+        const ctx4 = document.getElementById('chart4').getContext('2d');
+        const chart4 = new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                labels: ['M01', 'M02', 'M03', 'M04', 'May', 'M05', 'RNA', 'RMA', 'RDI', 'PCR', 'CIC', 'AIC'],
+                datasets: [{
+                    label: 'Tiempo de respuesta',
+                    data: [58, 65, 52, 60, 55, 58, 45, 50, 48, 62, 45, 55],
+                    backgroundColor: ['#4CAF50', '#F44336', '#FFC107', '#00BCD4', '#00BCD4', '#FFC107', '#CE93D8', '#4CAF50', '#FFC107', '#F44336', '#CE93D8', '#00BCD4'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>

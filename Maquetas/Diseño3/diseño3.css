@@ -1,0 +1,74 @@
+body {
+    background: #efefef7e;
+}
+
+.documents button {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.disabled {
+    background-color: #b3cce6;
+    cursor: not-allowed;
+}
+
+.bg-dark-blue {
+    background-color: #1d334a;
+    padding: 5px; 
+    margin: 10px 20px; 
+    border-radius: 20px;
+}
+
+.bg-blue {
+    background-color: #00446a;
+    box-shadow: 0 4px 10px rgb(0, 0, 0); 
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.rounded-circle {
+    margin-left: 0.2rem;
+}
+
+.btn-salida {
+    background-color: rgba(255, 255, 255, 0.36); 
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.collapse.show {
+    height: auto;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    color: white;
+    font-size: 1rem;
+}
+
+.btn-salida i {
+    color: white;
+    font-size: 1rem;
+}

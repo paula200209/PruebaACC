@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos del Trámite</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-size: 12px;
+            background: #efefef7e;
+        }
+        .title {
+            color: #0069c0;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            table-layout: auto; 
+        }
+        table th,
+        table td {
+            padding: 3px;
+        }
+        table th {
+            color: #0069c0;
+        }
+        .styleinput1 {
+            border: none;
+            border-radius: 0;
+            text-align: center;
+            width: 100%; 
+            box-sizing: border-box; 
+        }
+        .styleinput1:focus {
+            border-color: #1e91ed;
+        }
+        .title-pr {
+            background-color: #0069c0;
+            color: #fff;
+            padding: 15px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+        }
+        .title-pr i {
+            margin-right: 10px;
+            font-size: 40px;
+            color: #fff;
+        }
+        .title-bg {
+            background-color: #0069c0;
+            color: #fff;
+            padding: 5px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 16px;
+        }
+        .divider {
+            background-color: #efefef7e;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="mt-4" style="background-color: #fff;">
+        <h3 class="text-center title-bg">PREDIOS DEL TRÁMITE</h3>
+        
+        <div class="">
+            <!-- Tabla para mostrar los datos -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="text-center">Depto</th>
+                        <th>Municipio</th>
+                        <th>NUPRE</th>
+                        <th>Número predial</th>
+                        <th>ORIP</th>
+                        <th>Matricula inmobiliaria</th>
+                        <th>Área construida</th>
+                        <th>Área terreno</th>
+                        <th>RTAL</th>
+                        <th>Restitución</th>
+                    </tr>
+                    <tr class="divider">
+                        <td colspan="10"></td> <!-- Celda vacía que cubre todas las columnas -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="number" class="styleinput1" value="1"></td>
+                        <td><input type="number" class="styleinput1" value="019"></td>
+                        <td><input type="text" class="styleinput1" value="1.022.644.457"></td>
+                        <td><input type="text" class="styleinput1" value="Apoderado"></td>
+                        <td><input type="email" class="styleinput1" value="Paula@gmail.com"></td>
+                        <td><input type="text" class="styleinput1" value="Cra 7a #89 -03"></td>
+                        <td><input type="text" class="styleinput1" value="3012920680"></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trámites</title>
+    <link rel="stylesheet" href="diseño1.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>FERNANDO</h2>
+            <ul>
+                <li><a href="#"><i class="fas fa-search"></i> Consultas</a></li>
+                <li><a href="#"><i class="fas fa-file-alt"></i> Radicación</a></li>
+                <li><a href="#"><i class="fas fa-check-square"></i> Verificaciones</a></li>
+                <li><a href="#"><i class="fas fa-user-plus"></i> Asignaciones</a></li>
+                <li><a href="#"><i class="fas fa-list-alt"></i> Trámites <span class="badge">14</span></a></li>
+                <li><a href="#"><i class="fas fa-check-circle"></i> Aprobaciones</a></li>
+                <li><a href="#"><i class="fas fa-certificate"></i> Certificados</a></li>
+                <li><a href="#"><i class="fas fa-retweet"></i> Rendimientos</a></li>
+                <li><a href="#"><i class="fas fa-arrow-up"></i> Automáticas</a></li>
+                <li><a href="#"><i class="fas fa-map-marker-alt"></i> Visor geográfico</a></li>
+                <li><a href="#" class="button">Salida segura</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <h1>Trámites</h1>
+            <section class="card">
+                <h2>Filtro de Trámites</h2>
+                <!-- Botones de filtro en el HTML -->
+                <div class="status-buttons">
+                    <button class="filter-button" data-status="pendientes">
+                        Pendientes <div class="number">16</div>
+                        <div class="circle"></div>
+                    </button>
+                    <button class="filter-button" data-status="rechazados">
+                        Rechazados <div class="number">16</div>
+                        <div class="circle"></div>
+                    </button>
+                    <button class="filter-button" data-status="aprobados">
+                        Aprobados  <div class="number">16</div>
+                        <div class="circle"></div>
+                    </button>
+                    <button class="filter-button active" data-status="todos">
+                        Todos <div class="number">16</div>
+                        <div class="circle"></div>
+                    </button>
+                </div>
+            </section>
+            <section class="card">
+                <h2>Listado de trámites</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Radicado</th>
+                            <th>Fecha de radicación</th>
+                            <th>Número predial</th>
+                            <th>Trámite</th>
+                            <th>Sede</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr class="data-row" data-status="pendientes">
+                            <td>1-2</td>
+                            <td>SNR2022EE064904</td>
+                            <td>05/05/2022</td>
+                            <td>000000000000000000000000000000</td>
+                            <td>M01-Cambio de propietario</td>
+                            <td>Anapoima</td>
+                            <td class="actions">
+                                <span class="show-details">></span>
+                            </td>
+                        </tr>
+                        <tr class="details-row">
+                            <td colspan="7">
+                                <div class="details">
+                                    <div class="title">Radicador</div>
+                                    <div class="info">
+                                        <span class="label">Nombre:</span>
+                                        <span class="value">Miguel Suarez</span>
+                                    </div>
+                                    <div class="info">
+                                        <span class="label">Fecha de radicación:</span>
+                                        <span class="value">05/05/2022</span>
+                                    </div>
+                                    <div class="title">Validador</div>
+                                    <div class="info">
+                                        <span class="label">Nombre:</span>
+                                        <span class="value">Daniel Morales</span>
+                                    </div>
+                                    <div class="info">
+                                        <span class="label">Fecha de validación:</span>
+                                        <span class="value">20/05/2022</span>
+                                    </div>
+                                    <div class="title">Notas:</div>
+                                    <div class="info">
+                                        <span class="value">Pretium lectus sodales habitant massa bibendum lorem...</span>
+                                    </div>
+                                    <div class="title">Trámites previos</div>
+                                    <div class="info">
+                                        <i class="fas fa-chevron-right icon"></i>
+                                        <span class="value">Ver detalle</span>
+                                    </div>
+                                    <div class="title">Documentación</div>
+                                    <div class="info">
+                                        <i class="fas fa-chevron-right icon"></i>
+                                        <span class="value">Ver detalle</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- Fin del ejemplo -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <script src="diseño1.js"></script>
+</body>
+</html>
